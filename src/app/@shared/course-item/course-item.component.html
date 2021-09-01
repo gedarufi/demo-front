@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">
+      <span
+        class="badge rounded-pill float-end text-capitalize"
+        [ngClass]="{
+          'bg-success': course.status=='passed',
+          'bg-danger': course.status=='failed',
+          'bg-light text-dark': course.status=='in-progress'
+        }"
+      >{{ status }}</span>
+      {{ course.course.name }}
+    </h5>
+    <p class="card-text">
+      {{ course.course.description }}
+      <a [routerLink]="['/content', course.course.id]">Ver más</a>
+    </p>
+  </div>
+</div>

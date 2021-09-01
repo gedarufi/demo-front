@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  ApiUrl: 'http://localhost:3000/api/v1',
+  PublicUrl: 'http://localhost:3000',
+  Auth: {
+    tokenName: 'gfcglobal-tt',
+    loginUrl: 'http://localhost:3000/api/v1/login'
+  }
 };
 
 /*

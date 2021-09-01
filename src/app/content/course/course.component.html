@@ -1,0 +1,17 @@
+<ng-container *ngIf="course$ | async as course">
+  <section class="container">
+    <h1>{{ course.id }} - {{ course.name }}</h1>
+    <small class="text-muted">{{ course.description }}</small>
+    <hr>
+    <div
+      class="course__page"
+      *ngIf="course.pages.length > 0; else withoutContent"
+      [innerHTML]="course.pages[0].content"
+    ></div>
+    <ng-template #withoutContent>
+      <section class="course__withoutContent border border-info border-3 rounded">
+        Estamos preparando el contenido de este curso
+      </section>
+    </ng-template>
+  </section>
+</ng-container>

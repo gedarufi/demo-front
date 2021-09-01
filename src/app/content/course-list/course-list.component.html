@@ -1,0 +1,9 @@
+<main class="container">
+  <section class="row row-cols-1 row-cols-md-2 g-4">
+    <article class="col-md-4 col-xs-1" *ngFor="let course of courses | async">
+      <course-available [course]="course"></course-available>
+    </article>
+  </section>
+</main>
+
+

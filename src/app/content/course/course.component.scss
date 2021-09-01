@@ -1,0 +1,21 @@
+.course__page {
+  ::ng-deep {
+    img,
+    video {
+      left: 50%;
+      margin: 1.5rem 0;
+      max-width: 100%;
+      position: relative;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.course__withoutContent {
+  align-items: center;
+  color: var(--bs-info);
+  display: flex;
+  font-size: 1.5rem;
+  height: 160px;
+  justify-content: center;
+}
